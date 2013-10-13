@@ -26,6 +26,10 @@
 		38386B4017F8D346006C0BA5 /* GreenAlien.png in Resources */ = {isa = PBXBuildFile; fileRef = 38386B3B17F8D346006C0BA5 /* GreenAlien.png */; };
 		38386B4117F8D346006C0BA5 /* SpaceShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 38386B3C17F8D346006C0BA5 /* SpaceShip.png */; };
 		38386B4217F8D346006C0BA5 /* YellowAlien.png in Resources */ = {isa = PBXBuildFile; fileRef = 38386B3D17F8D346006C0BA5 /* YellowAlien.png */; };
+		3839C276180ABDAD00B229CC /* starSoundTrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3839C275180ABDAD00B229CC /* starSoundTrack.mp3 */; };
+		3889A6F21809EF040086B3C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889A6F11809EF040086B3C8 /* AVFoundation.framework */; };
+		3889A6F41809F4FF0086B3C8 /* LASER2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3889A6F31809F4FF0086B3C8 /* LASER2.mp3 */; };
+		3889A6F61809F5070086B3C8 /* LASER1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3889A6F51809F5070086B3C8 /* LASER1.mp3 */; };
 		38D8BCD117F8DAC500594A98 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D8BCD017F8DAC500594A98 /* Game.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		38386B3B17F8D346006C0BA5 /* GreenAlien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenAlien.png; sourceTree = "<group>"; };
 		38386B3C17F8D346006C0BA5 /* SpaceShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceShip.png; sourceTree = "<group>"; };
 		38386B3D17F8D346006C0BA5 /* YellowAlien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowAlien.png; sourceTree = "<group>"; };
+		3839C275180ABDAD00B229CC /* starSoundTrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starSoundTrack.mp3; sourceTree = "<group>"; };
+		3889A6F11809EF040086B3C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3889A6F31809F4FF0086B3C8 /* LASER2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LASER2.mp3; sourceTree = "<group>"; };
+		3889A6F51809F5070086B3C8 /* LASER1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LASER1.mp3; sourceTree = "<group>"; };
 		38D8BCCF17F8DAC500594A98 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Game.h; sourceTree = "<group>"; };
 		38D8BCD017F8DAC500594A98 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = ../Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3889A6F21809EF040086B3C8 /* AVFoundation.framework in Frameworks */,
 				38386B0717F8D187006C0BA5 /* CoreGraphics.framework in Frameworks */,
 				38386B0917F8D187006C0BA5 /* UIKit.framework in Frameworks */,
 				38386B0517F8D187006C0BA5 /* Foundation.framework in Frameworks */,
@@ -114,6 +123,7 @@
 		38386B0317F8D187006C0BA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3889A6F11809EF040086B3C8 /* AVFoundation.framework */,
 				38386B0417F8D187006C0BA5 /* Foundation.framework */,
 				38386B0617F8D187006C0BA5 /* CoreGraphics.framework */,
 				38386B0817F8D187006C0BA5 /* UIKit.framework */,
@@ -141,6 +151,9 @@
 		38386B0B17F8D188006C0BA5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3839C275180ABDAD00B229CC /* starSoundTrack.mp3 */,
+				3889A6F51809F5070086B3C8 /* LASER1.mp3 */,
+				3889A6F31809F4FF0086B3C8 /* LASER2.mp3 */,
 				38386B3917F8D346006C0BA5 /* BlueAlien.png */,
 				38386B3A17F8D346006C0BA5 /* Bullet.png */,
 				38386B3B17F8D346006C0BA5 /* GreenAlien.png */,
@@ -252,10 +265,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3889A6F61809F5070086B3C8 /* LASER1.mp3 in Resources */,
 				38386B3F17F8D346006C0BA5 /* Bullet.png in Resources */,
 				38386B4117F8D346006C0BA5 /* SpaceShip.png in Resources */,
+				3889A6F41809F4FF0086B3C8 /* LASER2.mp3 in Resources */,
 				38386B1D17F8D188006C0BA5 /* Images.xcassets in Resources */,
 				38386B3E17F8D346006C0BA5 /* BlueAlien.png in Resources */,
+				3839C276180ABDAD00B229CC /* starSoundTrack.mp3 in Resources */,
 				38386B4017F8D346006C0BA5 /* GreenAlien.png in Resources */,
 				38386B0F17F8D188006C0BA5 /* InfoPlist.strings in Resources */,
 				38386B1817F8D188006C0BA5 /* Main.storyboard in Resources */,

@@ -7,12 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 int ShipMovement;
 int BulletMovement;
+int MonsterBulletMovement1;
+int MonsterBulletMovement2;
+int MonsterBulletMovement3;
+
 int BulletsOnScreen;
+int ShipBullet1OnScreen;
+int ShipBullet2OnScreen;
+int ShipBullet3OnScreen;
 int MonsterMovement;
 int MonsterMoveDown;
+int ScreenBottom;
+
 BOOL Monster1Hit;
 BOOL Monster2Hit;
 BOOL Monster3Hit;
@@ -23,6 +33,7 @@ BOOL Monster7Hit;
 BOOL Monster8Hit;
 BOOL Monster9Hit;
 BOOL Monster10Hit;
+BOOL ShipWasHit;
 
 
 
@@ -32,8 +43,10 @@ BOOL Monster10Hit;
     IBOutlet UIButton *Exit;
     IBOutlet UIButton *Shoot;
     IBOutlet UIImageView *Ship;
+    IBOutlet UIImageView *Monster1Bullet;
+    IBOutlet UIImageView *Monster2Bullet;
+    IBOutlet UIImageView *Monster3Bullet;
     IBOutlet UIImageView *Bullet;
-
     IBOutlet UIImageView *Monster1;
     IBOutlet UIImageView *Monster2;
     IBOutlet UIImageView *Monster3;
@@ -47,10 +60,16 @@ BOOL Monster10Hit;
     
     IBOutlet UILabel *WinOrLoose;
     
+    AVAudioPlayer *audioPlayer;
+    AVAudioPlayer *audioPlayer2;
+    AVAudioPlayer *audioPlayer3;
+    AVAudioPlayer *titleSongPlayer;
     
     NSMutableArray * MonsterArray;
     NSMutableArray * MonsterHitArray;
     NSTimer * MovementTimer;
+    NSTimer * ShootTimer;
+    
 }
 
 -(IBAction)Start:( id)sender;
@@ -60,6 +79,8 @@ BOOL Monster10Hit;
 -(void)Collition;
 -(void)MonsterKilled;
 -(void)MonsterMoveDown;
+-(void)MonsterFire;
 -(void)GameOver;
+
 
 @end
