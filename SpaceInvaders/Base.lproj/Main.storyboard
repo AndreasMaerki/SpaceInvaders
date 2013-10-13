@@ -44,6 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="359" y="42"/>
         </scene>
         <!--Game-->
         <scene sceneID="b3x-5R-Vwa">
@@ -79,8 +80,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-Li-ecF">
-                                <rect key="frame" x="0.0" y="383" width="320" height="59"/>
+                                <rect key="frame" x="0.0" y="361" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Shoot">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,11 +92,23 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SpaceShip.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-WL-ScT">
-                                <rect key="frame" x="125" y="471" width="71" height="54"/>
+                                <rect key="frame" x="132" y="487" width="56" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-Ps-45Q">
-                                <rect key="frame" x="157" y="443" width="6" height="25"/>
+                                <rect key="frame" x="157" y="454" width="6" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kqo-B1-KlA">
+                                <rect key="frame" x="98" y="2" width="6" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-Y0-WlB">
+                                <rect key="frame" x="200" y="0.0" width="6" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-Vw-Mc4">
+                                <rect key="frame" x="247" y="0.0" width="6" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenAlien.png" translatesAutoresizingMaskIntoConstraints="NO" id="guF-CG-0Bd">
@@ -138,7 +152,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-nZ-iWZ">
-                                <rect key="frame" x="33" y="332" width="255" height="66"/>
+                                <rect key="frame" x="33" y="324" width="255" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -152,8 +166,11 @@
                         <outlet property="Exit" destination="tUY-oP-p2d" id="GDK-qR-Hfl"/>
                         <outlet property="Monster1" destination="guF-CG-0Bd" id="PtZ-EM-F4b"/>
                         <outlet property="Monster10" destination="Hb8-ry-NMe" id="jmY-d7-sb2"/>
+                        <outlet property="Monster1Bullet" destination="Kqo-B1-KlA" id="APT-PT-1Mb"/>
                         <outlet property="Monster2" destination="mTY-dP-0vl" id="Zon-jp-Jb3"/>
+                        <outlet property="Monster2Bullet" destination="VcG-Y0-WlB" id="8Rt-Dk-DHO"/>
                         <outlet property="Monster3" destination="RmG-zR-ngW" id="tma-A2-LCv"/>
+                        <outlet property="Monster3Bullet" destination="3OH-Vw-Mc4" id="3Bv-bJ-wJR"/>
                         <outlet property="Monster4" destination="eqN-dg-x47" id="5kc-ui-szt"/>
                         <outlet property="Monster5" destination="1Es-cI-EOr" id="KHx-3s-Uxo"/>
                         <outlet property="Monster6" destination="8id-jC-7x1" id="dRT-lj-Mmv"/>
@@ -168,14 +185,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsa-Cz-XOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="42"/>
+            <point key="canvasLocation" x="770" y="33"/>
         </scene>
     </scenes>
     <resources>
         <image name="BlueAlien.png" width="200" height="200"/>
+        <image name="BlueAlien.png" width="200" height="200"/>
+        <image name="BlueAlien.png" width="200" height="200"/>
+        <image name="BlueAlien.png" width="200" height="200"/>
+        <image name="Bullet.png" width="100" height="200"/>
+        <image name="Bullet.png" width="100" height="200"/>
+        <image name="Bullet.png" width="100" height="200"/>
         <image name="Bullet.png" width="100" height="200"/>
         <image name="GreenAlien.png" width="200" height="200"/>
+        <image name="GreenAlien.png" width="200" height="200"/>
+        <image name="GreenAlien.png" width="200" height="200"/>
+        <image name="GreenAlien.png" width="200" height="200"/>
+        <image name="GreenAlien.png" width="200" height="200"/>
         <image name="SpaceShip.png" width="200" height="200"/>
+        <image name="YellowAlien.png" width="200" height="200"/>
         <image name="YellowAlien.png" width="200" height="200"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
