@@ -27,9 +27,11 @@
 		38386B4117F8D346006C0BA5 /* SpaceShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 38386B3C17F8D346006C0BA5 /* SpaceShip.png */; };
 		38386B4217F8D346006C0BA5 /* YellowAlien.png in Resources */ = {isa = PBXBuildFile; fileRef = 38386B3D17F8D346006C0BA5 /* YellowAlien.png */; };
 		3839C276180ABDAD00B229CC /* starSoundTrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3839C275180ABDAD00B229CC /* starSoundTrack.mp3 */; };
+		3879CD331819710C00D8EA17 /* AbstractGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3879CD321819710C00D8EA17 /* AbstractGameObject.m */; };
 		3889A6F21809EF040086B3C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889A6F11809EF040086B3C8 /* AVFoundation.framework */; };
 		3889A6F41809F4FF0086B3C8 /* LASER2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3889A6F31809F4FF0086B3C8 /* LASER2.mp3 */; };
 		3889A6F61809F5070086B3C8 /* LASER1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3889A6F51809F5070086B3C8 /* LASER1.mp3 */; };
+		38C16B2A181C4CC800D237E9 /* AlienShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C16B29181C4CC800D237E9 /* AlienShip.m */; };
 		38D8BCD117F8DAC500594A98 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D8BCD017F8DAC500594A98 /* Game.m */; };
 /* End PBXBuildFile section */
 
@@ -69,9 +71,13 @@
 		38386B3C17F8D346006C0BA5 /* SpaceShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceShip.png; sourceTree = "<group>"; };
 		38386B3D17F8D346006C0BA5 /* YellowAlien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowAlien.png; sourceTree = "<group>"; };
 		3839C275180ABDAD00B229CC /* starSoundTrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starSoundTrack.mp3; sourceTree = "<group>"; };
+		3879CD311819710C00D8EA17 /* AbstractGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractGameObject.h; path = ../AbstractGameObject.h; sourceTree = "<group>"; };
+		3879CD321819710C00D8EA17 /* AbstractGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractGameObject.m; path = ../AbstractGameObject.m; sourceTree = "<group>"; };
 		3889A6F11809EF040086B3C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3889A6F31809F4FF0086B3C8 /* LASER2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LASER2.mp3; sourceTree = "<group>"; };
 		3889A6F51809F5070086B3C8 /* LASER1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LASER1.mp3; sourceTree = "<group>"; };
+		38C16B28181C4CC800D237E9 /* AlienShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlienShip.h; sourceTree = "<group>"; };
+		38C16B29181C4CC800D237E9 /* AlienShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlienShip.m; sourceTree = "<group>"; };
 		38D8BCCF17F8DAC500594A98 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Game.h; sourceTree = "<group>"; };
 		38D8BCD017F8DAC500594A98 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = ../Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,10 @@
 		38386B0A17F8D188006C0BA5 /* SpaceInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				3879CD311819710C00D8EA17 /* AbstractGameObject.h */,
+				3879CD321819710C00D8EA17 /* AbstractGameObject.m */,
+				38C16B28181C4CC800D237E9 /* AlienShip.h */,
+				38C16B29181C4CC800D237E9 /* AlienShip.m */,
 				38386B1617F8D188006C0BA5 /* Main.storyboard */,
 				38386B1917F8D188006C0BA5 /* InvadersViewController.h */,
 				38386B1A17F8D188006C0BA5 /* InvadersViewController.m */,
@@ -294,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3879CD331819710C00D8EA17 /* AbstractGameObject.m in Sources */,
 				38386B1517F8D188006C0BA5 /* InvadersAppDelegate.m in Sources */,
 				38386B1B17F8D188006C0BA5 /* InvadersViewController.m in Sources */,
+				38C16B2A181C4CC800D237E9 /* AlienShip.m in Sources */,
 				38386B1117F8D188006C0BA5 /* main.m in Sources */,
 				38D8BCD117F8DAC500594A98 /* Game.m in Sources */,
 			);

@@ -26,6 +26,7 @@
 }
 
 
+
 - (void)viewDidLoad
 {
     Bullet.hidden = YES;
@@ -38,6 +39,7 @@
     MonsterHitArray = nil;
     MonsterArray = nil;
     
+    // reset all hit bools
     for (int i =0; i < MonsterHitArray.count; i++)
     {
         MonsterHitArray[i] = @NO;
@@ -48,25 +50,26 @@
     MonsterMovement = 5;
     MonsterMoveDown = 5;
     
+    
+    // initialize the audio players. Maby this could be handeled easyer, or by fewer players, but it works so far.
     NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/LASER1.mp3",[[NSBundle mainBundle] resourcePath]]];
+    NSURL *url2 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/LASER1.mp3",[[NSBundle mainBundle] resourcePath]]];
     NSError *error;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     audioPlayer.numberOfLoops = 0;
     
-    NSURL *url4 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/starSoundTrack.mp3",[[NSBundle mainBundle] resourcePath]]];
-    NSError *error4;
-    titleSongPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url4 error:&error4];
-    titleSongPlayer.numberOfLoops = -1;
+    audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    audioPlayer2.numberOfLoops = 0;
     
+    audioPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:&error];
+    audioPlayer3.numberOfLoops = 0;
 
     
-    audioPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    audioPlayer3.numberOfLoops = 0;
+    NSURL *soundtrackUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/starSoundTrack.mp3",[[NSBundle mainBundle] resourcePath]]];
+    titleSongPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundtrackUrl error:&error];
+    titleSongPlayer.numberOfLoops = -1; // -1 loop = infinetly
     
-    NSURL *url2 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/LASER2.mp3",[[NSBundle mainBundle] resourcePath]]];
-    NSError *error2;
-    audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:&error2];
-    audioPlayer2.numberOfLoops = 0;
+    
     
     [titleSongPlayer prepareToPlay];
     [audioPlayer prepareToPlay];
@@ -76,6 +79,8 @@
     [super viewDidLoad];
 }
 
+// when the user presses the start button, we have to initialize the components.
+// for later use it makes sense to place the monsters and the respective hit bools into Arrays
 -(IBAction)Start:( id)sender
 {
     
@@ -85,6 +90,7 @@
     Shoot.hidden = NO;
     ScreenBottom = 578;
     
+    // since the two array are couppled anyway, take a dictionary next time!
     MonsterArray = [[NSMutableArray alloc] initWithObjects:
                     Monster1,
                     Monster2,
@@ -147,7 +153,7 @@
 -(void)drawRect: (CGRect)rect
 {
     CGColorRef white = [[UIColor whiteColor] CGColor];
-    
+
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, white);
     CGContextFillRect(context, CGRectMake(10, 10, 100, 100));
